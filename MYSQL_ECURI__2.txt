@@ -1,0 +1,58 @@
+mysql> select * from cheval;
+
+mysql> select  couleur_chev,COUNT( ID_CH) as Cheval_Black
+    -> from cheval
+    ->  where couleur_chev = 'black'
+    -> group by couleur_chev ;
+
+
+mysql> select  nom_race,COUNT( ID_CH) as Cheval_ARABIAN
+    -> from cheval
+    ->  where  nom_race = 'ARABIAN'
+    -> group by  nom_race ;
+
+
+
+mysql> select ID_CH, nom_chev from cheval
+    -> where num_tatto = 300;
+
+
+mysql> select COUNT(nom_con) as Nb_edition
+    -> from concours
+    ->  where nom_con = 'DRESSAGE';
+
+
+mysql> select * from concours;
+
+
+
+mysql>  select SUM( nb_participant) as Total_Participants
+    -> from concours
+    -> where nom_con ='DRESSAGE';
+
+
+
+mysql> select * from participation
+    -> ;
+
+
+mysql> select ID_CH from participation
+    -> WHERE nom_con = 'JUMPING' AND annee = 2024;
+
+mysql> select * from personnes;
+
+
+mysql> select nom_per from personnes;
+
+
+mysql> select nom_per  as Directrice
+    ->  from personnes
+    -> where fonction = 'directrice';
+
+
+
+mysql>  select COUNT( ID_PER ) as Nb_Pro
+    -> from proprietaire;
+
+
+
